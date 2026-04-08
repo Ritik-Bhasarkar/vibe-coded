@@ -1,0 +1,34 @@
+# aiwatch configuration
+# Copy this file to ~/.aiwatch.toml for user-level settings,
+# or keep it in your project directory for project-level settings.
+
+# Seconds of silence before the bell fires (but ONLY if the last output
+# looks like the tool is waiting for human input — see prompt_patterns).
+silence_timeout = 5.0
+
+# Regex patterns (case-insensitive) matched against the last few lines of
+# output. The bell ONLY fires when silence follows output matching at least
+# one of these. Override to customise; omit to use built-in defaults.
+# prompt_patterns = [
+#   "\\(y\\b",          # (y/n) style prompts
+#   "\\by/n\\b",
+#   "\\ballow\\b.*\\bdeny\\b",
+#   "\\?\\s*$",         # lines ending with ?
+#   ">\\s*$",           # lines ending with >
+# ]
+
+[sound]
+# Set to false to disable the bell entirely
+enabled = true
+
+# Path to a custom sound file.
+# Supported formats: WAV (built-in), MP3 (requires: pip install playsound)
+# Leave empty to use the auto-generated kitchen bell.
+file = ""
+
+[window]
+# Bring the terminal window to the foreground when the tool needs input.
+# - Minimised windows are restored and focused.
+# - Tiled / split-screen windows are NOT maximised (only the taskbar flashes).
+# - Already-visible windows are just raised to the front.
+auto_maximize = true

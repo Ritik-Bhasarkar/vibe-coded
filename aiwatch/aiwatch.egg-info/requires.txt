@@ -1,0 +1,12 @@
+
+[:sys_platform == "win32"]
+pywinpty>=2.0.13
+pywin32>=305
+
+[sound]
+playsound>=1.3.0
+
+[toml]
+
+[toml:python_version < "3.11"]
+tomli>=2.0

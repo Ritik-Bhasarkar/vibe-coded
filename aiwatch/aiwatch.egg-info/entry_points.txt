@@ -1,0 +1,2 @@
+[console_scripts]
+aiwatch = aiwatch.__main__:main

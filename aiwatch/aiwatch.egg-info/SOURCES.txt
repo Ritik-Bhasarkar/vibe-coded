@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+aiwatch/__init__.py
+aiwatch/__main__.py
+aiwatch/bell_gen.py
+aiwatch/config.py
+aiwatch/notifier.py
+aiwatch/watcher.py
+aiwatch/window_manager.py
+aiwatch.egg-info/PKG-INFO
+aiwatch.egg-info/SOURCES.txt
+aiwatch.egg-info/dependency_links.txt
+aiwatch.egg-info/entry_points.txt
+aiwatch.egg-info/requires.txt
+aiwatch.egg-info/top_level.txt

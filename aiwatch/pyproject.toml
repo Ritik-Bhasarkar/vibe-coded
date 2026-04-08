@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiwatch"
+version = "0.1.0"
+description = "Bell + window-focus notification when your AI CLI pauses for approval"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    # Windows PTY  (ConPTY wrapper)
+    "pywinpty>=2.0.13; sys_platform == 'win32'",
+    # Windows window management
+    "pywin32>=305; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+# For playing MP3 / non-WAV custom sounds
+sound = ["playsound>=1.3.0"]
+# TOML config support on Python < 3.11
+toml = ["tomli>=2.0; python_version < '3.11'"]
+
+[project.scripts]
+aiwatch = "aiwatch.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aiwatch*"]
